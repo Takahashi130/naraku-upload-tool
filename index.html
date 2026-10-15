@@ -26,8 +26,8 @@ It is not offered to the public, not sold, and has no other users.</p>
 <ul>
   <li>Uploads the owner's own finished videos to the owner's own channel (<code>videos.insert</code>), with the title, description, tags and visibility chosen by the owner.</li>
   <li>Sets the custom thumbnail of those videos (<code>thumbnails.set</code>).</li>
-  <li>Reads back the uploaded video's status to confirm that processing finished and the visibility is correct (<code>videos.list</code>, <code>channels.list</code>, <code>playlistItems.list</code>).</li>
-  <li>When the owner asks, changes the scheduled publish time of the owner's own videos (<code>videos.update</code>).</li>
+  <li>Before uploading, checks that the authorized channel is the owner's channel and that none of the owner's recent uploads has the same title (<code>channels.list</code>, <code>playlistItems.list</code>). After uploading, reads back the video's status to confirm the visibility and that processing finished (<code>videos.list</code>).</li>
+  <li>When the owner asks, sets or removes the scheduled publish time of the owner's own private videos (<code>videos.update</code>, with a separate <code>youtube.force-ssl</code> authorization).</li>
 </ul>
 <p>Typical use is a few uploads per week and well under 1,000 API requests per day.</p>
 

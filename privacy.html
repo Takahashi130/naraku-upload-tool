@@ -14,7 +14,7 @@
 <nav><a href="./">Home</a><a href="privacy.html">Privacy Policy / プライバシーポリシー</a><a href="terms.html">Terms / 利用規約</a></nav>
 
 <h1>Privacy Policy</h1>
-<p>Last updated: 2026-10-06</p>
+<p>Last updated: 2026-10-15</p>
 
 <h2>1. YouTube API Services</h2>
 <p>Naraku Upload Tool (“the tool”) uses YouTube API Services. By using the tool you agree to be bound by the
@@ -26,24 +26,25 @@
 
 <h2>3. Information the tool accesses</h2>
 <ul>
-  <li>Through Google OAuth 2.0, the owner grants the scopes <code>youtube.upload</code> and <code>youtube.readonly</code> (and <code>youtube.force-ssl</code> only when changing a scheduled publish time).</li>
-  <li>The tool reads the owner's own channel ID and title, and the status, title and processing details of the owner's own videos, to confirm that an upload went to the correct channel and finished processing.</li>
-  <li>The tool sends to YouTube only the owner's own video files, thumbnails and text (title, description, tags, visibility).</li>
+  <li>Through Google OAuth 2.0, the owner grants the scopes <code>youtube.upload</code> and <code>youtube.readonly</code> (and <code>youtube.force-ssl</code> only for the optional scheduling command, which lists the owner's private videos and sets or removes their scheduled publish time).</li>
+  <li>The tool reads the owner's own channel ID and title, the titles of the owner's recent uploads (to avoid uploading the same video twice), and the status, title, processing details and duration of the owner's own videos, to confirm that an upload went to the correct channel and finished processing.</li>
+  <li>The tool sends to YouTube only the owner's own video files, thumbnails, text and settings (title, description, tags, category, language, visibility, made-for-kids setting, and a scheduled publish time when the owner sets one).</li>
 </ul>
 
 <h2>4. How the information is used and stored</h2>
 <ul>
   <li>The information is used only to upload and confirm the owner's own videos.</li>
-  <li>The OAuth token is stored only on the owner's own computer and is never shared or sent anywhere except Google.</li>
-  <li>The tool keeps a local log of the owner's own uploads (video ID, title, visibility, time). It does not collect data about viewers or other channels.</li>
+  <li>The OAuth token is stored only on the owner's own computer (on a drive attached to it) and is never shared or sent anywhere except Google.</li>
+  <li>When the owner chooses, the tool writes a local record of the owner's own upload (video ID, YouTube Studio link, visibility, scheduled publish time, thumbnail file name, and the owner's channel ID and title). It does not collect data about viewers or other channels.</li>
   <li>The tool does not use cookies, analytics, or advertising, and does not sell or share any information with third parties.</li>
 </ul>
 
 <h2>5. Revoking access and deleting data</h2>
 <p>Access can be revoked at any time from the Google security settings page:
 <a href="https://security.google.com/settings/security/permissions">https://security.google.com/settings/security/permissions</a>.
-After revocation the local token stops working and is deleted. Local upload logs are deleted on request within 7 days.
-Data obtained from YouTube API Services is refreshed or deleted within 30 days as required by the YouTube API Services Developer Policies.</p>
+After revocation the stored token no longer works, and the owner deletes the local token file.
+The local upload records contain only information about the owner's own uploads, and the owner can delete them at any time.
+Data obtained from YouTube API Services is refreshed or deleted as required by the YouTube API Services Developer Policies.</p>
 
 <h2>6. Contact</h2>
 <p><a href="mailto:infocrifa@gmail.com">infocrifa@gmail.com</a></p>
